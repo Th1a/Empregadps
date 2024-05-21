@@ -1,0 +1,91 @@
+public class Principal {
+           static Scanner ler = new Scanner(System.in);
+        
+        static ArrayList<Empregado> funcionarios = new ArrayList <Empregado>();
+
+            
+public static void main(String [] args){
+        
+        System.out.println("Bem-vindo");
+        
+        System.out.println("1- Criar novo empregado");
+        System.out.println("2- Promover empregado");
+        System.out.println("3- Aumentar Salario ");
+        System.out.println("4- Demitir empregado");
+        System.out.println("5- Fazer aniversario do empregado");
+        System.out.println("6- Mostrar detalhes dos empregados");
+        System.out.println("7-Sair");
+        
+        int escolha = ler.nextInt();
+        
+        switch(escolha){
+            case 1:
+                Empregado func = new Empregado();
+                System.out.println("Digite o nome do empregado");
+                func.setNome(ler.nextLine());
+                System.out.println("Digite o salario do empregado");
+                func.setSalario(ler.nextDouble());
+                System.out.println("Digite a idade do empregado");
+                func.setIdade(ler.nextInt());
+                System.out.println("Digite o id do empregado");
+                func.setId(ler.nextInt());
+                System.out.println("O empregado "+ func.getNome() + "foi contratado");
+                funcionarios.add(func);
+                break;
+           
+            case 2:
+                
+                listarEmpregados();
+                System.out.println("Qual o id empregado voce quer promover");
+                func.getId(ler.nextInt());
+                func.promover(id);
+                break;
+                
+            case 3:
+                 listarEmpregados();
+                System.out.println("Qual o id empregado voce quer aumentar p salario");
+                func.getId(ler.nextInt());
+                func.aumentarSalario(id);
+                break;
+                
+            case 4:
+                 listarEmpregados();
+                System.out.println("Qual o id empregado voce quer demitir");
+                func.getId(ler.nextInt());
+                func.demitir(id); 
+                
+                break;
+            case 5 :
+                 listarEmpregados();
+                System.out.println("Qual o id empregado voce quer promover");
+                func.getId(ler.nextInt());
+                func.nome(id);
+                func.salario(id);
+                func.idade(id);
+                func.id();
+                break;
+            case 6 : 
+                 listarEmpregados();
+                System.out.println("Qual o id empregado voce quer ver os detalhes");
+                func.getId(ler.nextInt());
+                func.getId();
+            
+            case 7:
+                ler.close();
+                break;
+                    
+                
+               
+                        
+                    
+        }
+        
+    } 
+    public static void listarEmpregados(){
+        for(int i = 0; i<funcionarios.size();i++){
+            funcionarios.get(i).toString();
+            
+    }
+    }
+    
+}
